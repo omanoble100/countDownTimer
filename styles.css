@@ -1,0 +1,144 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@500;700&display=swap');
+*, *::after, *::before {
+    box-sizing: border-box;
+    
+}
+
+:root {
+--white: hsl(0, 0%, 100%);
+--dark-blue: hsl(236, 21%, 26%);
+--very-dark-blue: hsl(235, 16%, 14%);
+--another-dark-blue: hsl(262, 17%, 12%);
+--grayish-blue: hsl(237, 18%, 59%);
+--soft-red: hsl(345, 95%, 68%);
+
+
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--another-dark-blue);
+    background-image: url('images/bg-stars.svg'), url('images/pattern-hills.svg');
+    background-position: top, bottom;
+    background-size: contain;
+    background-repeat: repeat, no-repeat;
+    font-family: 'Red Hat Text', sans-serif;
+    
+}
+
+h1 {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto 0px;
+    padding: 20px 10px;
+    /* min-height: 80vh; */
+}
+
+.wrap h1{
+        text-align: center;
+        font-size: 70px;
+        margin-bottom: 370px;
+        margin-top: 100px;
+        letter-spacing: 10px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+}
+
+.card {
+    /* padding: 5px; */
+   margin: 10px ;
+   display: inline-block;
+   height: 20%;
+   text-align: center;
+   
+}
+
+.card h2 {
+    background: linear-gradient(180deg, var(--dark-blue) 40%, var(--very-dark-blue) 60%);
+    font-size: 50px;
+    padding: 25px;
+    width: 150px;
+    height: 80%;
+    color: var(--soft-red);
+    border-radius: 5px;
+}
+
+.card p {
+    color: var(--grayish-blue);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 20px; */
+}
+
+.icons img {
+    margin: 200px  30px 20px;
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        height: 100vh;
+        background-image: url('images/bg-stars.svg');
+        background-position: top;
+        background-size: contain;
+        background-repeat: repeat;
+    }
+
+    .wrap h1{
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 370px;
+        margin-top: 300px;
+        letter-spacing: 10px;
+}
+
+    .wrapper {
+        margin: 50px auto 0;
+        padding: 40px 10px 0;
+        background-image:  url('images/pattern-hills.svg');
+        background-position:  bottom;
+        /* background-size: contain; */
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card h2 {
+        font-size:60px;
+        min-height: 150px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .icon img{
+        margin: 50px auto;
+    }
+}
